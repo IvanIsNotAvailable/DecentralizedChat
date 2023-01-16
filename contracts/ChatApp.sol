@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity >=0.7.0 <0.9.0;
 
 contract ChatApp {
     // User Struct
@@ -21,6 +21,14 @@ contract ChatApp {
         string msg;
     }
 
+    // All User Struct
+    struct AllUserStruct {
+        string name;
+        address accountAddress;
+    }
+
+    AllUserStruct[] getAllUsers;
+
     mapping(address => user) UserList;
     mapping(bytes32 => message[]) allMessages;
 
@@ -35,6 +43,7 @@ contract ChatApp {
         require(bytes(name).length > 0, "Username cannot be empty.");
 
         UserList[msg.sender].name = name;
+        getAllUsers.push(AllUserStruct(name, msg.sender));
     }
 
     // Get the UserName
@@ -113,4 +122,10 @@ contract ChatApp {
         bytes32 chatCode = _getChatCode(msg.sender, friend_key);
         return allMessages[chatCode];
     }
+
+    // Get All User
+    function getAllAppUsers() public view returns(AllUserStruct[] memory){
+        return getAllUsers;
+    }
 }
+

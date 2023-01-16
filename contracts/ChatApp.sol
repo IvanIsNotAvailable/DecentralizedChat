@@ -47,6 +47,24 @@ contract ChatApp {
         return UserList[publicKey].name;
     }
 
+    //Add Friend Check
+    function addFriend(address friend_key, string calldata name) external {
+        require(UserCheckExist(msg.sender), "Create an Account");
+        require(UserCheckExist(friend_key), "User is not registered yet");
+        require(
+            msg.sender != friend_key,
+            "User cannot add themseleves as friends."
+        );
+        require(
+            CheckAlreadyFriends(msg.sender, friend_key) == false,
+            "Users are Already been friends."
+        );
+
+
+        _addFriend(msg.sender, friend_key, name);
+        _addFriend(friend_key, msg.sender, userList[msg.sender].name);
+    }
+
     // Check already friends
     function CheckAlreadyFriends(address publicKey, address publicKey2) internal view returns(bool) {
         if (UserList[publicKey].friendList.length> userList[publicKey2].friendList.length){
@@ -69,25 +87,18 @@ contract ChatApp {
 
     // Get My Friend
     function getMyFriend() external view returns(friend[] memory) {
-        return UserList();
+        return UserList[msg.sender].friendList;
     }
 
+    // Get chat Code
+    function _getChatCode(address publicKey1, address publicKey2) internal pure returns(bytes32) {
+        if (publicKey1<publicKey2){
+            return keccak256(abi.encodePacked(pubicKey, publicKey2);)
+        } else return keccak256(abi.encodePacked(publicKey2, publicKey));
+    }
 
-    //Add Friend Check
-    function addFriend(address friend_key, string calldata name) external {
-        require(UserCheckExist(msg.sender), "Create an Account");
-        require(UserCheckExist(friend_key), "User is not registered yet");
-        require(
-            msg.sender != friend_key,
-            "User cannot add themseleves as friends."
-        );
-        require(
-            CheckAlreadyFriends(msg.sender, friend_key) == false,
-            "Users are Already been friends."
-        );
-
-
-        _addFriend(msg.sender, friend_key, name);
-        _addFriend(friend_key, msg.sender, userList[msg.sender].name);
+    // Send Message
+    function sendMessage(address friend_key, string calldata _msg) external {
+        require(UserCheckExist);
     }
 }

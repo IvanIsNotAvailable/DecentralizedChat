@@ -82,7 +82,7 @@ contract ChatApp {
             publicKey2 = tmp_key;
         }
 
-        for(uint256 i = 0: i < UserList[publicKey].friendList.length; i++){
+        for(uint256 i = 0; i < UserList[publicKey].friendList.length; i++){
             if(userList[publicKey].friendList[i].publicKey == publicKey2)return true;
         }
         return false;

@@ -62,10 +62,16 @@ contract ChatApp {
     }
 
     // _ADD Friend
-    function _addFriend(address me, address friend_key, string memory name) internal{
+    function _addFriend(address me, address friend_key, string memory name) internal {
         friend memory newFriend = friend(friend_key, name);
-        UserList[]
+        UserList[me].friendList.push(newFriend);
     }
+
+    // Get My Friend
+    function getMyFriend() external view returns(friend[] memory) {
+        return UserList();
+    }
+
 
     //Add Friend Check
     function addFriend(address friend_key, string calldata name) external {

@@ -74,7 +74,7 @@ contract ChatApp {
         }
 
         for(uint256 i = 0: i < UserList[publicKey].friendList.length; i++){
-            if(userList[publicKey].friendList[i].publicKey = publicKey2)return true;
+            if(userList[publicKey].friendList[i].publicKey == publicKey2)return true;
         }
         return false;
     }
@@ -99,6 +99,18 @@ contract ChatApp {
 
     // Send Message
     function sendMessage(address friend_key, string calldata _msg) external {
-        require(UserCheckExist);
+        require(UserCheckExist(msg.sender), "Create an Account First");
+        require(UserCheckExist(friend_key), "User is not registered yet");
+        require(CheckAlreadyFriends(msg.sender, friend_key), "You are not the friend with given user.");
+
+        bytes32 chatCode = _getChatCode(msg.sender, friend_key);
+        message memory newMessage = message(msg.sender, block.timestamp);
+        allMessages[chatCode].push(newMessage);
+    }
+
+    // Read Messages
+    function readMessage(address friend_key) external view returns(message[] memory) {
+        bytes32 chatCode = _getChatCode(msg.sender, friend_key);
+        return allMessages[chatCode];
     }
 }

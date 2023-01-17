@@ -5,5 +5,6 @@ import Loader from "./Loader/Loader";
 import Model from "./Model/Model";
 import UserCard from "./UserCard/UserCard";
 import Error from "./Error/Error";
+import Splash from "./Splash/Splash";
 
-export { NavBar, Filter, Friend, Loader, Model, UserCard, Error };
+export { NavBar, Filter, Friend, Loader, Model, UserCard, Error, Splash };

@@ -123,6 +123,8 @@ export const ChatDAppProvider = ({ children }) => {
         createAccount,
         addFriends,
         sendMessage,
+        ConnectWallet,
+        CheckWalletConnect,
         account,
         userName,
         friendLists,

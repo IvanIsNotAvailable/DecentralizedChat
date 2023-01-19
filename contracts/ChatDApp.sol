@@ -47,9 +47,11 @@ contract ChatDApp {
     }
 
     // Get the UserName
-    function getUserName(
-        address publicKey
-    ) external view returns (string memory) {
+    function getUserName(address publicKey)
+        external
+        view
+        returns (string memory)
+    {
         require(UserCheckExist(publicKey), "User is not register");
         return UserList[publicKey].name;
     }
@@ -72,10 +74,11 @@ contract ChatDApp {
     }
 
     // Check already friends
-    function CheckAlreadyFriends(
-        address publicKey,
-        address publicKey2
-    ) internal view returns (bool) {
+    function CheckAlreadyFriends(address publicKey, address publicKey2)
+        internal
+        view
+        returns (bool)
+    {
         if (
             UserList[publicKey].friendList.length >
             UserList[publicKey2].friendList.length
@@ -108,10 +111,11 @@ contract ChatDApp {
     }
 
     // Get chat Code
-    function _getChatCode(
-        address publicKey1,
-        address publicKey2
-    ) internal pure returns (bytes32) {
+    function _getChatCode(address publicKey1, address publicKey2)
+        internal
+        pure
+        returns (bytes32)
+    {
         if (publicKey1 < publicKey2) {
             return keccak256(abi.encodePacked(publicKey1, publicKey2));
         } else return keccak256(abi.encodePacked(publicKey2, publicKey1));
@@ -132,9 +136,11 @@ contract ChatDApp {
     }
 
     // Read Messages
-    function readMessage(
-        address friend_key
-    ) external view returns (message[] memory) {
+    function readMessage(address friend_key)
+        external
+        view
+        returns (message[] memory)
+    {
         bytes32 chatCode = _getChatCode(msg.sender, friend_key);
         return allMessages[chatCode];
     }

@@ -1,0 +1,51 @@
+.login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 30px 10px;
+    min-width: 350px;
+    height: auto;
+    background-color: beige;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px var(--color);
+}
+.logo{
+    font-size: 25px;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.body_content {
+    padding: 10px;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form_a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color);
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Ubuntu';
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+.input_btn{
+    cursor: pointer;
+}

@@ -35,7 +35,7 @@ import user_add_white from "./user_add_white.png";
 import user_black from "./user_black.png";
 import user_white from "./user_white.png";
 
-export {
+export const images = {
   comment_black,
   comment_white,
   copy_black,

@@ -1,13 +1,16 @@
-# Sample Hardhat Project
+# ChatDApp with react 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Creating the decentralized Chat application with using solidity and react.
 
-Try running some of the following tasks:
+``` 
+To install this repositoriy 
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+git clone https://github.com/IvanIsNotAvailable/chatdapp.git
+
+Run the application
+
+- npx run dev
+
+server listening on port 3000
+
 ```

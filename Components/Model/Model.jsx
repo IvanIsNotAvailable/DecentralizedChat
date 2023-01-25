@@ -28,7 +28,7 @@ const Model = ({ openModel, title, head, info, smallInfo, images, functionName }
 
                     <div className={styles.Model_box_right_name}>
                         <div className={styles.Model_box_right_name_info}>
-                            <Image src={images.person} alt="user" width={30} height={30} />
+                            <Image src={images.person2} alt="user" width={30} height={30} />
                             <input type="text" placeholder='Your name' onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className={styles.Model_box_right_name_info}>

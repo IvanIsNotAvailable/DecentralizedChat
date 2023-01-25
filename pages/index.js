@@ -10,7 +10,7 @@ import { ChatDappContect } from "../Context/ChatAppContext";
 
 const ChatApp = () => {
   const {} = useContext(ChatDappContect);
-  return <div>hello</div>;
+  return <div className="content_container">hello</div>;
 };
 
 export default ChatApp;

@@ -7,5 +7,19 @@ import UserCard from "./UserCard/UserCard";
 import Error from "./Error/Error";
 import Splash from "./Splash/Splash";
 import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
+import Sidebar from "./Sidebar/Sidebar";
 
-export { NavBar, Filter, Friend, Loader, Model, UserCard, Error, Splash, Login };
+export {
+  NavBar,
+  Filter,
+  Friend,
+  Loader,
+  Model,
+  UserCard,
+  Error,
+  Splash,
+  Login,
+  Sidebar,
+  Signup,
+};

@@ -36,7 +36,7 @@ export const ConnectWallet = async () => {
 };
 
 const fetchContract = (signerOrProvider) =>
-  new ethers.Contract(ChatAppABI, ChatAppaddress, signerOrProvider);
+  new ethers.Contract(ChatAppaddress, ChatAppABI, signerOrProvider);
 
 export const ConnectingWithContract = async () => {
   try {
@@ -65,6 +65,6 @@ export const converTime = (time) => {
     (newTime.getMonth() + 1) +
     "/" +
     newTime.getFullYear();
-    
+
   return realTime;
 };

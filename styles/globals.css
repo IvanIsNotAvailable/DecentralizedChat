@@ -1,23 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500&family=Ubuntu&display=swap');
 
+
+.theme-dark {
+    --background: #2c3333;
+    --card-color: #395b64;
+    --btn-color: #a5c9ca;
+    --font-color: #e7f6f2;
+}
+
+.theme-blue {
+    --background: #3f3b6c;
+    --card-color: #624f82;
+    --btn-color: #9f73ab;
+    --font-color: #a3c7d6;
+}
+
+:root {
+    --background: #2c3333;
+    --font-color: #e7f6f2;
+    --brand-font-family: 'Sofia Sans', sans-serif;
+    --brand-color: aliceblue;
+    --brand-font-size: 25px;
+    --nav-bg: #2E2A39;
+    --backgroun-color: #F8F9F8;
+    --active-tab-color: #ffffff;
+    --tab-font-color: #5fabb7;
+    --active-tab-font-color: #000000;
+    --active-tab-border: 10px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--font-color) !important;
 }
 
-:root {
-    --nav-bg: #2E2A39;
-    --backgroun-color: #F8F9F8;
-    --active-tab-color: #5FABB7;
-    --tab-font-color: #5fabb7;
-    --active-tab-font-color: #f8f9f8;
-}
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.content_container {
+    display: block;
+    padding: 10px;
 }

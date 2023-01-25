@@ -34,8 +34,11 @@ import user_add_black from "./user_add_black.png";
 import user_add_white from "./user_add_white.png";
 import user_black from "./user_black.png";
 import user_white from "./user_white.png";
+import side_wall from "./side_wall.jpg";
+import account from "./account.png";
 
-export const images = {
+export default {
+  account,
   comment_black,
   comment_white,
   copy_black,
@@ -72,4 +75,5 @@ export const images = {
   user_add_white,
   user_black,
   user_white,
+  side_wall,
 };

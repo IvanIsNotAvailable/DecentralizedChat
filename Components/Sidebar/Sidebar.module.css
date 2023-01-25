@@ -1,0 +1,128 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 15px 15px;
+    width: 300px;
+    height: calc(100vh - 56px);
+    gap: 30px;
+    background-color: var(--nav-bg);
+}
+
+.sidebar .search {
+    position: relative;
+}
+
+.sidebar .search .icon_search {
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    color: black;
+    font-size: 1.4em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sidebar .search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #fff;
+    padding: 6px;
+    height: 38px;
+    border-radius: 30px;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.sidebar .search input::placeholder {
+    color: #555;
+}
+
+.sidebar .list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .list .sidebar_item {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin: 0;
+    padding-left: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidebar .list .sidebar_item.sidebar_active {
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--active-tab-color);
+}
+
+.sidebar .list .sidebar_item.sidebar_active .sidebar_link {
+    color: var(--active-tab-font-color);
+}
+
+.sidebar .list .sidebar_item .sidebar_link {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: var(--tab-font-color)
+}
+
+.sidebar_item.sidebar_active .b_tab:nth-child(1) {
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 98.2%;
+    height: 20px;
+    top: -20px;
+    left: 5px;
+}
+
+.sidebar_item.sidebar_active .b_tab:nth-child(2) {
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 98.2%;
+    height: 20px;
+    bottom: -20px;
+    left: 5px;
+}
+
+.sidebar_item.sidebar_active .b_tab:nth-child(1):before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--nav-bg);
+    border-bottom-right-radius: var(--active-tab-border);
+}
+
+.sidebar_item.sidebar_active .b_tab:nth-child(2):before {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--nav-bg);
+    border-top-right-radius: var(--active-tab-border);
+}
+
+@media only screen and (max-width:35em) {
+    .sidebar{
+        display: none;
+    }
+}

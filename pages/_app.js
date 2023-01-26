@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }) => (
       {/*<Signup /> */}
       <NavBar />
       <div className="wrapper">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <Component {...pageProps}/>
       </div>
     </ChatDAppProvider>

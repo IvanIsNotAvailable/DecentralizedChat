@@ -67,7 +67,7 @@ const Navbar = () => {
             {menuItems.map((el, i) => (
               <div
                 onClick={() => setActive(i + 1)}
-                key={1 + 1}
+                key={i + 1}
                 className={`${styles.mobile_nav_item} ${active == i + 1 ? styles.mobile_nav_active : ""
                   }`}>
                 <Link
@@ -98,21 +98,23 @@ const Navbar = () => {
 
 
       {/* MODEL COMPONENT */}
-      {!openModel && (
+      {openModel && (
         <div className={styles.modelBox}>
           <Model openModel={setOpenModel}
             title="Welcome to"
             head="Cygnus"
-            info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta veniam eligendi ab similique doloremque ipsam asperiores eaque saepe voluptas atque, tempora error. Quod dicta soluta odit, eos illo veniam dolorum?'
-            smallInfo="select you name.."
-            images={images.person1}
+            info='Users can have conversations, share information, and create web content in this Cygnus chat platform without having to enter their information.'
+            smallInfo="Create your account"
+            image={images.side_wall}
             functionName={createAccount}
+            address={account}
           />
 
         </div>
       )}
       {error == "" ? "" : <Error error={error} />}
     </nav >
+    
   );
 };
 

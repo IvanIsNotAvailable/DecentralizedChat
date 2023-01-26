@@ -34,16 +34,17 @@ export const ChatDAppProvider = ({ children }) => {
       const connectAcc = await ConnectWallet();
       setAccount(connectAcc);
       // Get UserName
-      const userName = await contract.getUsername(connectAcc);
-      setUserName(userName);
+      //const userName = await contract.getUserName(connectAcc);
+      //setUserName(userName);
       // Get Friend
-      const friendLists = await contract.getMyFriend();
-      setfriendLists(friendLists);
+      const friendList = await contract.getMyFriend();
+      setfriendLists(friendList);
       // Get all app user list
-      const userLists = await contract.getAllAppUsers();
-      setUserLists(userLists);
+      const userList = await contract.getAllAppUsers();
+      setUserLists(userList);
     } catch (error) {
       setError("Please Install the metamask and Connect the wallet!");
+      console.log(error);
     }
   };
   useEffect(() => {
@@ -63,12 +64,14 @@ export const ChatDAppProvider = ({ children }) => {
 
   const createAccount = async ({ name, accountAddress }) => {
     try {
-      if (name || accountAddress)
-        return setError("Name and Account address cannot be empty!");
+      //if (name || accountAddress)
+      //  return alert("Name and Account address cannot be empty!");//setError("Name and Account address cannot be empty!");
       const contract = await ConnectingWithContract();
-      const getCreatedUser = await contract.createAccount();
+      const getCreatedUser = await contract.CreatAccount(name);
+      console.log('hello')
       setLoading(true);
       await getCreatedUser.wait();
+      setLoading(false);
       window.location.reload();
     } catch (error) {
       setError(

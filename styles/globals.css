@@ -16,15 +16,15 @@
 }
 
 :root {
-    --background: #2c3333;
-    --font-color: #e7f6f2;
+    --background: aliceblue;
+    --font-color: black;
     --brand-font-family: 'Sofia Sans', sans-serif;
     --brand-color: aliceblue;
     --brand-font-size: 25px;
-    --nav-bg: #2E2A39;
+    --nav-bg: #2D5F6E;
     --backgroun-color: #F8F9F8;
     --active-tab-color: #ffffff;
-    --tab-font-color: #5fabb7;
+    --tab-font-color: #c4d6d8;
     --active-tab-font-color: #000000;
     --active-tab-border: 10px;
 }
@@ -38,8 +38,8 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--background);
     color: var(--font-color) !important;
 }

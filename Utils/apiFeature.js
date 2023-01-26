@@ -31,6 +31,7 @@ export const ConnectWallet = async () => {
     const firstAcc = accounts[0];
     return firstAcc;
   } catch (error) {
+    console.log("ook");
     console.log(error);
   }
 };

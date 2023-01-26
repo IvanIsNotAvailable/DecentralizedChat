@@ -36,6 +36,7 @@ import user_black from "./user_black.png";
 import user_white from "./user_white.png";
 import side_wall from "./side_wall.jpg";
 import account from "./account.png";
+import loader from "./loader.gif";
 
 export default {
   account,
@@ -66,6 +67,7 @@ export default {
   pic_black,
   pic_white,
   send_black,
+  loader,
   send_white,
   setting_black,
   setting_white,

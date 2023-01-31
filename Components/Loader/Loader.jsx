@@ -8,7 +8,7 @@ const Loader = () => {
     return (
         <div className={styles.loader}>
             <div className={styles.loader_box}>
-                <Image src={images.loader} width={100} height={100}/>
+                <Image src={images.loader} width={100} height={100} alt="loader"/>
             </div>
         </div>
     )

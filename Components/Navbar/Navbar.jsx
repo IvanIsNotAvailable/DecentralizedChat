@@ -84,14 +84,14 @@ const Navbar = () => {
           {account == "" ? (
             <button className={styles.btn_warning} onClick={() => connectWallet()}>{""}<span>Connect Wallet</span></button>
           ) : (
-            <button className={styles.btn_info} onClick={() => setOpenModel(true)}>
+            <button className={styles.btn_success} onClick={() => setOpenModel(true)}>
               {userName ? (<AiOutlineApi className={styles.icon} />) : (<AiOutlineUserAdd className={styles.icon} />)}
               <span>{userName || "Create an Account"}</span>
             </button>
           )}
           <button className={styles.menu} onClick={() => { open ? setOpen(false) : setOpen(true) }}>
-            {open ? (<AiOutlineClose />)
-              : (<AiOutlineMenu />)}
+            {open ? (<AiOutlineClose className={styles.icon} />)
+              : (<AiOutlineMenu className={styles.icon} />)}
           </button>
         </div>
       </div>
@@ -114,7 +114,7 @@ const Navbar = () => {
       )}
       {error == "" ? "" : <Error error={error} />}
     </nav >
-    
+
   );
 };
 

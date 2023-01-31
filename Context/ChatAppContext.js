@@ -34,14 +34,15 @@ export const ChatDAppProvider = ({ children }) => {
       const connectAcc = await ConnectWallet();
       setAccount(connectAcc);
       // Get UserName
-      //const userName = await contract.getUserName(connectAcc);
-      //setUserName(userName);
+      const username = await contract.getUserName(connectAcc);
+      setUserName(username);
       // Get Friend
       const friendList = await contract.getMyFriend();
       setfriendLists(friendList);
       // Get all app user list
       const userList = await contract.getAllAppUsers();
       setUserLists(userList);
+
     } catch (error) {
       setError("Please Install the metamask and Connect the wallet!");
       console.log(error);
@@ -68,7 +69,6 @@ export const ChatDAppProvider = ({ children }) => {
       //  return alert("Name and Account address cannot be empty!");//setError("Name and Account address cannot be empty!");
       const contract = await ConnectingWithContract();
       const getCreatedUser = await contract.CreatAccount(name);
-      console.log('hello')
       setLoading(true);
       await getCreatedUser.wait();
       setLoading(false);

@@ -1,6 +1,6 @@
 .error{
     position: fixed;
-    inset: 30% 70% 30%  0%;
+    inset: 30% 70% 20%  0%;
     margin: 0 auto;
     background-color: var(--background-color);
     text-align: center;
@@ -13,7 +13,7 @@
 
 @media only screen and (max-width: 35em) {
     .error{
-        inset: 10% 10% 55% 10%;
+        inset: 30% 10% 40% 10%;
     }
     
 }

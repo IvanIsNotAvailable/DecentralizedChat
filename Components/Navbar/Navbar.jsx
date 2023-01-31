@@ -18,24 +18,24 @@ const Navbar = () => {
     },
     {
       menu: "Chat",
-      link: "/"
+      link: "chat"
     },
     {
       menu: "Contract",
-      link: "/"
+      link: "/contract"
     },
     {
       menu: "Setting",
-      link: "/"
+      link: "/setting"
     },
     {
       menu: "TERMS OF USE",
-      link: "/"
+      link: "/termsofuse"
     }
   ]
 
 
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModel, setOpenModel] = useState(false);
 

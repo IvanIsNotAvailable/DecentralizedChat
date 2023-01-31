@@ -9,6 +9,7 @@ import Splash from "./Splash/Splash";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import Sidebar from "./Sidebar/Sidebar";
+import Welcome from "./Welcome/Welcome";
 
 export {
   NavBar,
@@ -22,4 +23,5 @@ export {
   Login,
   Sidebar,
   Signup,
+  Welcome,
 };

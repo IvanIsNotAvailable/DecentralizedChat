@@ -16,12 +16,13 @@ import menu_white from "./menu_white.png";
 import menubar_black from "./menubar_black.png";
 import menubar_white from "./menubar_white.png";
 import person from "./person.png";
-import person1 from "./person1.png";
-import person2 from "./person2.png";
-import person3 from "./person3.png";
-import person4 from "./person4.png";
-import person5 from "./person5.png";
-import person6 from "./person6.png";
+import person0 from "./profiles/person0.png";
+import person1 from "./profiles/person1.png";
+import person2 from "./profiles/person2.png";
+import person3 from "./profiles/person3.png";
+import person4 from "./profiles/person4.png";
+import person5 from "./profiles/person5.png";
+import person6 from "./profiles/person6.png";
 import pic_black from "./pic_black.png";
 import pic_white from "./pic_white.png";
 import send_black from "./send_black.png";
@@ -35,11 +36,9 @@ import user_add_white from "./user_add_white.png";
 import user_black from "./user_black.png";
 import user_white from "./user_white.png";
 import side_wall from "./side_wall.jpg";
-import account from "./account.png";
 import loader from "./loader.gif";
 
 export default {
-  account,
   comment_black,
   comment_white,
   copy_black,
@@ -58,6 +57,7 @@ export default {
   menubar_black,
   menubar_white,
   person,
+  person0,
   person1,
   person2,
   person3,

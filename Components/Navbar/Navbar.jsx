@@ -41,7 +41,8 @@ const Navbar = () => {
 
   const { account, userName, connectWallet, createAccount, error } = useContext(ChatDappContect);
   return (
-    <nav className={styles.navbar}>
+    <div className="header">
+      <nav className={styles.navbar}>
       <a href="/" className={styles.brand}>Cygnus</a>
       <div className={styles.link_gp}>
         {/* Desktop View */}
@@ -112,8 +113,10 @@ const Navbar = () => {
 
         </div>
       )}
-      {error == "" ? "" : <Error error={error} />}
+      
     </nav >
+    {error == "" ? "" : <Error error={error} />}
+    </div>
 
   );
 };

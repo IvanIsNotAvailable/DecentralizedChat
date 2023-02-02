@@ -1,19 +1,13 @@
 .error{
-    position: fixed;
-    inset: 30% 70% 20%  0%;
-    margin: 0 auto;
-    background-color: var(--background-color);
-    text-align: center;
-    border-radius: 1rem;
-    padding: 2rem;
-    border-radius: 50px;
-    background: rosybrown;
-    z-index: 999999999999;
+    background-color: #2b3b3b;
+    color: white;
+    height: auto;
+    letter-spacing: 1px;
 }
 
-@media only screen and (max-width: 35em) {
-    .error{
-        inset: 30% 10% 40% 10%;
-    }
-    
+.error_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }

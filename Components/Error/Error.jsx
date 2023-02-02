@@ -6,8 +6,8 @@ const Error = ({ error }) => {
     return (
         <div className={styles.error}>
             <div className={styles.error_box}>
-                <h1>Please Create a Wallet and Reload the browser.</h1>
-                {error}
+                <strong>Please Create a Wallet or Reload the browser.</strong>
+                <div>{error}</div>
             </div>
         </div>
     );

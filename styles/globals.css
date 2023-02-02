@@ -46,13 +46,3 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
-.wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.content_container {
-    display: block;
-    padding: 10px;
-}

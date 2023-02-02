@@ -20,4 +20,6 @@
 .welcome .info {
     font-size: 16px;
     font-family: 'Ubuntu';
+    text-align: center;
+    line-height: 30px;
 }

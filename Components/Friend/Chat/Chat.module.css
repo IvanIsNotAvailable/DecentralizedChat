@@ -1,0 +1,12 @@
+.chat{
+    width: 100%;
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.chatUserInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+

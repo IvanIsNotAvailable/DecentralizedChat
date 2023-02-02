@@ -113,7 +113,7 @@ export const ChatDAppProvider = ({ children }) => {
 
   const readUser = async (userAddress) => {
     const contract = await ConnectingWithContract();
-    const userName = await contract.getUsername(userAddress);
+    const userName = await contract.getUserName(userAddress);
     setCurrentUserName(userName);
     setCurrentUserAddress(userAddress);
   };
@@ -127,6 +127,7 @@ export const ChatDAppProvider = ({ children }) => {
         sendMessage,
         ConnectWallet,
         CheckWalletConnect,
+        readUser,
         account,
         userName,
         friendLists,

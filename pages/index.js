@@ -4,11 +4,12 @@ import MyApp from "./_app";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { ChatDappContect } from "../Context/ChatAppContext";
-import { Welcome, Chat } from "../Components/index";
+import { Welcome, Friend } from "../Components/index";
 
 const ChatApp = () => {
   const { account } = useContext(ChatDappContect);
-  return <div>{!account ? <Welcome /> : <Chat />}</div>;
+
+  return <div>{!account ? <Welcome /> : <Friend />}</div>;
 };
 
 export default ChatApp;

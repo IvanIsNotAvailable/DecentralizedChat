@@ -53,7 +53,7 @@ export const ConnectingWithContract = async () => {
 };
 
 export const converTime = (time) => {
-  const newTime = new Date(time.toNumber());
+  const newTime = new Date(parseInt(time));
   const realTime =
     newTime.getHours() +
     "/" +

@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { ChatDAppProvider } from "../Context/ChatAppContext";
-import { NavBar,Sidebar,Login, Signup } from "../Components/index";
+import { NavBar, Sidebar, Login, Signup } from "../Components/index";
 
 const MyApp = ({ Component, pageProps }) => (
   <div>
@@ -11,7 +11,7 @@ const MyApp = ({ Component, pageProps }) => (
       <NavBar />
       <div className="wrapper">
         {/* <Sidebar /> */}
-        <Component {...pageProps}/>
+        <Component {...pageProps} />
       </div>
     </ChatDAppProvider>
   </div>

@@ -3,9 +3,12 @@
     grid-template-columns: 1fr 3fr;
     justify-content: space-between;
     padding: 5px 15px;
+    position: relative;
     height: 55px;
+    width: 100vw;
     background: rgb(12, 205, 163);
     background: linear-gradient(135deg, #484bf0 0%, rgb(199, 163, 101) 100%);
+    background: var(--nav-bg);
 }
 
 .navbar .brand {
@@ -23,6 +26,7 @@
 
 .link_gp,
 .site {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,10 +39,10 @@
 }
 
 .site .nav_item {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 150px;
     padding: 10px;
 }
 
@@ -53,7 +57,9 @@
 
 
 .site .nav_item .nav_link {
+    position: relative;
     display: flex;
+    width: 100%;
     text-decoration: none;
     color: var(--tab-font-color)
 }
@@ -161,6 +167,9 @@
 @media only screen and (min-width:35em) {
     .menu {
         display: none;
+    }
+    .navbar{
+        width: 100vw;
     }
 }
 

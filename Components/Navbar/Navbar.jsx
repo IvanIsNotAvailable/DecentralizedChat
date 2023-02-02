@@ -18,7 +18,7 @@ const Navbar = () => {
     },
     {
       menu: "Chat",
-      link: "/chat"
+      link: "/"
     },
     {
       menu: "Contract",
@@ -35,7 +35,7 @@ const Navbar = () => {
   ]
 
 
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(2);
   const [open, setOpen] = useState(false);
   const [openModel, setOpenModel] = useState(false);
 

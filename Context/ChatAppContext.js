@@ -42,7 +42,6 @@ export const ChatDAppProvider = ({ children }) => {
       // Get all app user list
       const userList = await contract.getAllAppUsers();
       setUserLists(userList);
-
     } catch (error) {
       setError("Please Install the metamask and Connect the wallet!");
       console.log(error);
@@ -83,8 +82,8 @@ export const ChatDAppProvider = ({ children }) => {
   //add fri
   const addFriends = async ({ name, accountAddress }) => {
     try {
-      if (name || accountAddress)
-        return setError("Please Provide Name and Account address!!");
+      console.log(name, accountAddress);
+      //if (name || accountAddress) return setError("Please Provide Name and Account address!!");
       const contract = await ConnectingWithContract();
       const addmyfri = await contract.addFriend(accountAddress, name);
       setLoading(true);

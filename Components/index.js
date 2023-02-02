@@ -10,6 +10,7 @@ import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import Sidebar from "./Sidebar/Sidebar";
 import Welcome from "./Welcome/Welcome";
+import Chat from "./Chat/Chat";
 
 export {
   NavBar,
@@ -22,6 +23,7 @@ export {
   Splash,
   Login,
   Sidebar,
+  Chat,
   Signup,
   Welcome,
 };

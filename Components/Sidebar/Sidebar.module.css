@@ -9,30 +9,8 @@
     background-color: var(--nav-bg);
 }
 
-.sidebar .search {
+.sidebar .search_filed {
     position: relative;
-}
-
-.sidebar .search .icon_search {
-    position: absolute;
-    left: 13px;
-    top: 8px;
-    color: black;
-    font-size: 1.4em;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.sidebar .search input {
-    width: 100%;
-    outline: none;
-    border: none;
-    background: #fff;
-    padding: 6px;
-    height: 38px;
-    border-radius: 30px;
-    padding-left: 40px;
-    font-size: 14px;
 }
 
 .sidebar .search input::placeholder {

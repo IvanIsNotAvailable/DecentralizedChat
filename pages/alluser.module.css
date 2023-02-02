@@ -1,100 +1,68 @@
 .alluser_info {
-    position: relative;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .upper {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.search {
-    position: relative;
-    flex: 30%;
-    width: 100%;
-    padding: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search input {
-    position: relative;
-    width: 100%;
-    border-radius: 13px;
-    border: 1px solid #ccc;
-    outline: none;
-    padding: 10px 10px 10px 50px;
-    height: 50px;
-}
-
-.search_icon {
-    position: absolute;
-    font-size: 28px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    top: 0px;
-    left: 20px;
-    cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .alluser_info .title {
-    flex: 70%;
-    position: relative;
-    width: 100%;
-    margin: 2em auto;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Sofia Sans', sans-serif;
-    font-weight: 800;
+  flex: 70%;
+  position: relative;
+  width: 100%;
+  margin: 2em auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Sofia Sans", sans-serif;
+  font-weight: 800;
 }
 
 .alluser {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: grid;
-    padding: 10px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3em;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3em;
 }
 
-@media only screen and (max-width:35em) {
-    .alluser_info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+@media only screen and (max-width: 35em) {
+  .alluser_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .alluser_info .title {
-        width: 60%;
-        margin: .5em .5em 1em auto;
-        font-size: 1.5rem;
-        text-align: right;
-    }
+  .alluser_info .title {
+    width: 60%;
+    margin: 0.5em 0.5em 1em auto;
+    font-size: 1.5rem;
+    text-align: right;
+  }
 
-    .upper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+  .upper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .alluser {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        gap: 20px;
-    }
+  .alluser {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
 }
